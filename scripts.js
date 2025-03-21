@@ -4,7 +4,6 @@ const buttons = document.querySelectorAll(".button");
 const outputTitle = document.getElementById("outputTitle");
 const outputDescription = document.getElementById("outputDescription");
 
-
 // "Event listeners" for the color
 essieTC.addEventListener("click", function () {
     outputTitle.innerText = "essie turquoise & caicos";
@@ -41,7 +40,7 @@ sinfulT.addEventListener("click", function () {
     outputDescription.style.display = "block";
 });
 
-
+// don't ask me all ChatGPT
 function handleClick(event) {
     // Remove "active" class from all buttons
     buttons.forEach(button => button.classList.remove("active"));
