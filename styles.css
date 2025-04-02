@@ -1,27 +1,26 @@
 body {
-    font-family: sans-serif;
+    font-family: cursive;
     padding: 25px;
     background: white
 }
 
 #page-title {
+    font-family: 'Sofia', sans-serif;
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 50px;
     padding-bottom: 15px;
 }
-
+/* putting in flex so the images distribute across the page */
 #content {
-    box-align: center;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-
 }
 
 button {
     background: transparent;
-    border: circle;
-    padding: 1;
+    padding: 1px;
     cursor: pointer;
     margin: 3px;
     border-radius: 12px;
@@ -29,8 +28,11 @@ button {
 
 button img {
     display: block;
+    border-radius: 10px;
+    border: 3px solid transparent; /* Prevents shifting */
+    box-sizing: border-box;
 }
-
+/* cursor changes to click when over a clickable image */
 .button:hover,
 .button:focus,
 
@@ -46,9 +48,19 @@ button img {
     display: block;
     border-radius: 12px;
 }
-
-/* Active state styling */
+/* asked chatGPT how to add a signifier that that image was selected */
+    /* Active state styling */
 .button.active img {
     border: 4px solid #ff69b4;
     /* Highlight with a pink border */
+}
+
+#outputTitle {
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 5px; /* Less space below the title */
+}
+
+#outputDescription {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 0; /* No extra space above */
 }

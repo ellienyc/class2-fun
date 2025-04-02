@@ -5,7 +5,7 @@ const buttons = document.querySelectorAll(".button");
 const outputTitle = document.getElementById("outputTitle");
 const outputDescription = document.getElementById("outputDescription");
 
-// "Event listeners" for the color
+// "Event listeners" for each color, with the description
 essieTC.addEventListener("click", function () {
     outputTitle.innerText = "essie turquoise & caicos";
     outputDescription.innerText = "an aqua green cream";
@@ -41,7 +41,7 @@ sinfulT.addEventListener("click", function () {
     outputDescription.style.display = "block";
 });
 
-// ## don't ask me all ChatGPT
+// don't ask me; all ChatGPT for how to click off an image to "reset" the text
 function handleClick(event) {
     // Remove "active" class from all buttons
     buttons.forEach(button => button.classList.remove("active"));
@@ -64,6 +64,7 @@ function handleClick(event) {
 // Attach event listeners to buttons, ## arrays
 buttons.forEach(button => button.addEventListener("click", handleClick));
 
+// ChatGPT; for how to click off an image to "reset" the text
 // Reset when clicking anywhere outside the buttons
 document.addEventListener("click", function (event) {
     // Check if the clicked area is NOT a button

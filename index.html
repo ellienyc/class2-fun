@@ -1,18 +1,23 @@
 <html lang="en">
-
+<!-- all ChatGPT prompts and results at https://chatgpt.com/share/67ed7dd3-2278-8004-a5a9-32d4aea96573 -->
+<!-- also used 'CoPilot' for github w/in VS Code -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>class 2 fun nails</title>
+    <!-- from https://www.w3schools.com/css/tryit.asp?filename=trycss_font-google_sofia -->
+    <link href="https://fonts.googleapis.com/css?family=Sofia|Nunito" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-    <div id="page-title">
+<!-- title -->
+<div id="page-title">
         what color should I paint my nails?
     </div>
 
+<!-- making the buttons pictures of the different nail polish colors -->
     <div id="content">
 
         <button class="button" id="essieTC">
@@ -42,12 +47,12 @@
 
     <div id="content">
         <div id="right">
+<!-- description when clicked on, or off, the image -->
+            <p id="outputTitle" style="font-size: 30px;"> </p>
+            <p id="outputDescription" style="font-size: 20px;">click for polish info and description</p>
 
-            <p id="outputTitle" style="font-size: 18px; font-weight: bold;"> </p>
-            <p id="outputDescription" style="font-size: 16px;">click for polish info and description</p>
-
-            <p id="outputTitle" style="font-size: 18px; font-weight: bold; display: none;"></p>
-            <p id="outputDescription" style="font-size: 16px; display: none;"></p>
+            <p id="outputTitle" style="font-size: 30px; font-weight: bold; display: none;"></p>
+            <p id="outputDescription" style="font-size: 20px; display: none;"></p>
         </div>
         <script src="scripts.js"></script>
 </body>
