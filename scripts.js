@@ -1,4 +1,4 @@
-// all copied from class model or ChatGPT https://chatgpt.com/c/67dc5514-b2e8-8004-ba98-f7fbd9497355
+// all copied from class model or or CoPilot in VS Code or ChatGPT https://chatgpt.com/c/67dc5514-b2e8-8004-ba98-f7fbd9497355
 
 //JSON object for the data {key}, use notation to access and log
 const buttons = document.querySelectorAll(".button");
@@ -6,42 +6,7 @@ const outputTitle = document.getElementById("outputTitle");
 const outputDescription = document.getElementById("outputDescription");
 
 // "Event listeners" for each color, with the description
-essieTC.addEventListener("click", function () {
-    outputTitle.innerText = "essie turquoise & caicos";
-    outputDescription.innerText = "an aqua green cream";
-    outputTitle.style.display = "block";
-    outputDescription.style.display = "block";
-});
-
-essieADU.addEventListener("click", function () {
-    outputTitle.innerText = "essie all dolled up";
-    outputDescription.innerText = "a bright pink shiny cream";
-    outputTitle.style.display = "block";
-    outputDescription.style.display = "block";
-});
-
-opiTC.addEventListener("click", function () {
-    outputTitle.innerText = "OPI Toucan Do It If You Try";
-    outputDescription.innerText = "creamy orange coral";
-    outputTitle.style.display = "block";
-    outputDescription.style.display = "block";
-});
-
-opiDT.addEventListener("click", function () {
-    outputTitle.innerText = "OPI Dutch Tulips";
-    outputDescription.innerText = "pink-red crème";
-    outputTitle.style.display = "block";
-    outputDescription.style.display = "block";
-});
-
-sinfulT.addEventListener("click", function () {
-    outputTitle.innerText = "Sinful Colors Tempest";
-    outputDescription.innerText = "matte pastel lilac purple";
-    outputTitle.style.display = "block";
-    outputDescription.style.display = "block";
-});
-
-// don't ask me; all ChatGPT for how to click off an image to "reset" the text
+// don't ask me; all ChatGPT (and CoPilot) for how to click off an image to "reset" the text
 function handleClick(event) {
     // Remove "active" class from all buttons
     buttons.forEach(button => button.classList.remove("active"));
@@ -49,16 +14,59 @@ function handleClick(event) {
     // Add "active" class to the clicked button
     event.currentTarget.classList.add("active");
 
+    const img = event.currentTarget.querySelector("img");
+
     // Update text based on clicked button; ## booleans logic
     if (event.currentTarget.id === "essieTC") {
         outputTitle.innerText = "essie turquoise & caicos";
+        outputDescription.innerText = "an aqua green cream";
+       
+        // Toggle image source
+        if (img.src === img.getAttribute("data-original")) {
+            img.src = img.getAttribute("data-new");
+        } else {
+            img.src = img.getAttribute("data-original");
+        }
+
     } else if (event.currentTarget.id === "essieADU") {
         outputTitle.innerText = "essie all dolled up";
         outputDescription.innerText = "a bright pink shiny cream";
-    }
+        if (img.src === img.getAttribute("data-original")) {
+            img.src = img.getAttribute("data-new");
+        } else {
+            img.src = img.getAttribute("data-original");
+        }
+    } else if (event.currentTarget.id === "opiTC") {
+        outputTitle.innerText = "OPI Toucan Do It If You Try";
+        outputDescription.innerText = "a creamy orange coral";
 
-    // Stop event from propagating to the document click listener
-    event.stopPropagation();
+        // Toggle image source
+        if (img.src === img.getAttribute("data-original")) {
+            img.src = img.getAttribute("data-new");
+        } else {
+            img.src = img.getAttribute("data-original");
+        }
+    } else if (event.currentTarget.id === "opiDT") {
+        outputTitle.innerText = "OPI Dutch Tulips";
+        outputDescription.innerText = "a pink-red crème";
+
+        // Toggle image source
+        if (img.src === img.getAttribute("data-original")) {
+            img.src = img.getAttribute("data-new");
+        } else {
+            img.src = img.getAttribute("data-original");
+        }
+    } else if (event.currentTarget.id === "sinfulT") {
+        outputTitle.innerText = "Sinful Colors Tempest";
+        outputDescription.innerText = "a matte pastel lilac purple";
+
+        // Toggle image source
+        if (img.src === img.getAttribute("data-original")) {
+            img.src = img.getAttribute("data-new");
+        } else {
+            img.src = img.getAttribute("data-original");
+        }
+    }
 }
 
 // Attach event listeners to buttons, ## arrays
@@ -74,6 +82,14 @@ document.addEventListener("click", function (event) {
         outputDescription.innerText = "and description";
 
         // Remove active class from buttons
-        buttons.forEach(button => button.classList.remove("active"));
+        buttons.forEach(button => {
+            button.classList.remove("active");
+
+            // Reset image source to original
+            const img = button.querySelector("img");
+            if (img && img.getAttribute("data-original")) {
+                img.src = img.getAttribute("data-original");
+            }
+        });
     }
 });

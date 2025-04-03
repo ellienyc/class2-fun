@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>class 2 fun nails</title>
-    <!-- from https://www.w3schools.com/css/tryit.asp?filename=trycss_font-google_sofia -->
-    <link href="https://fonts.googleapis.com/css?family=Sofia|Nunito" rel="stylesheet">
-    
+    <!-- from https://www.w3schools.com/css/css_font_google.asp#:~:text=How%20To%20Use%20Google%20Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Nunito" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -18,31 +17,52 @@
     </div>
 
 <!-- making the buttons pictures of the different nail polish colors -->
+ <!-- added alternative images when the color is selected -->
     <div id="content">
 
         <button class="button" id="essieTC">
-            <img src="https://www.essie.com/-/media/project/loreal/brand-sites/essie/americas/us/products_nailpolish/enamels/greens/turquoise_and_caicos/essie-nail-polish-turquoise-and-caicos-095008001074-av4-530.jpg"
-                alt="essie turquoise" width="150">
+            <img class="polish-img" 
+            data-original="https://www.essie.com/-/media/project/loreal/brand-sites/essie/americas/us/products_nailpolish/enamels/greens/turquoise_and_caicos/essie-nail-polish-turquoise-and-caicos-095008001074-av4-530.jpg"
+            data-new="https://www.essie.com/-/media/project/loreal/brand-sites/essie/americas/us/products_nailpolish/enamels/greens/turquoise_and_caicos/essie-nail-polish-turquoise-and-caicos-095008001074-av32-530.jpg"
+            src="https://www.essie.com/-/media/project/loreal/brand-sites/essie/americas/us/products_nailpolish/enamels/greens/turquoise_and_caicos/essie-nail-polish-turquoise-and-caicos-095008001074-av4-530.jpg"
+            alt="essie turquoise" width="150"  height="150">
         </button>
 
         <button class="button" id="essieADU">
-            <img src="https://i5.walmartimages.com/seo/essie-Nail-Polish-Limited-Edition-Winter-2021-Collection-Vivid-Hot-Pink-All-Dolled-Up-0-46-Ounce_9c2ac247-62fe-4b7f-830d-63fbbd13ae20.a13921aff68b4609a65d4571edebc371.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
-                alt="essie pink" width="150">
+            <img class="polish-img" 
+            data-original="https://i5.walmartimages.com/seo/essie-Nail-Polish-Limited-Edition-Winter-2021-Collection-Vivid-Hot-Pink-All-Dolled-Up-0-46-Ounce_9c2ac247-62fe-4b7f-830d-63fbbd13ae20.a13921aff68b4609a65d4571edebc371.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+            data-new="https://i5.walmartimages.com/asr/29741219-bc24-4bee-85e7-e459e66b6300.73eaa13e3b012cf736d9b04c65b9a919.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
+            src="https://i5.walmartimages.com/seo/essie-Nail-Polish-Limited-Edition-Winter-2021-Collection-Vivid-Hot-Pink-All-Dolled-Up-0-46-Ounce_9c2ac247-62fe-4b7f-830d-63fbbd13ae20.a13921aff68b4609a65d4571edebc371.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+            alt="essie pink" 
+            width="150"  height="150">
         </button>
 
         <button class="button" id="opiTC">
-            <img src="https://i5.walmartimages.com/asr/c0e9341c-e2a3-468d-8364-e454f6a1ad9e.5846ff1c5519e27f072619140da1bfd1.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
-                alt="OPI orage" width="100">
+            <img class="polish-img"
+            data-original="https://eadn-wc04-4752373.nxedge.io/cdn/wp-content/uploads/2024/07/opi-toucan-do-it-if-you-try-1415418.1.jpg"
+            data-new="https://cdn.shopify.com/s/files/1/0649/4879/7673/products/toucan-do-it-if-you-try-mani_7b34a205-db12-47ad-bac6-c80c1206989f.jpg?v=1668735365&width=1080"
+            src="https://eadn-wc04-4752373.nxedge.io/cdn/wp-content/uploads/2024/07/opi-toucan-do-it-if-you-try-1415418.1.jpg"
+                alt="OPI orange" 
+                width="150" height="150">
         </button>
 
         <button class="button" id="opiDT">
-            <img src="https://target.scene7.com/is/image/Target/GUEST_bed872de-afd3-4d2c-b32c-768dd07f7e6a?wid=1200&hei=1200&qlt=80&fmt=webp"
-                alt="OPI red" width="150">
+            <img 
+            data-original="https://target.scene7.com/is/image/Target/GUEST_bed872de-afd3-4d2c-b32c-768dd07f7e6a?wid=1200&hei=1200&qlt=80&fmt=webp"
+            data-new="https://cdn.shopify.com/s/files/1/0649/4879/7673/products/dutch-tulips-mani_df94013e-33a2-46b4-a408-96e5d109951d.jpg?v=1668638301&width=1080"
+            src="https://target.scene7.com/is/image/Target/GUEST_bed872de-afd3-4d2c-b32c-768dd07f7e6a?wid=1200&hei=1200&qlt=80&fmt=webp"
+                alt="OPI red" 
+                width="150"  height="150">
         </button>
 
         <button class="button" id="sinfulT">
-            <img src="https://m.media-amazon.com/images/I/516v39wfkJL._SX679_.jpg" alt="Sinful Colors lilac"
-                width="150">
+            <img 
+            data-original="https://m.media-amazon.com/images/I/516v39wfkJL._SX679_.jpg" 
+            data-new="https://s7d9.scene7.com/is/image/dollargeneral/dg-36333301-2"
+            src="https://m.media-amazon.com/images/I/516v39wfkJL._SX679_.jpg" 
+                alt="Sinful Colors lilac"
+                color= #dda0dd 
+                width="150"  height="150">
     </div>
 
     <div id="content">

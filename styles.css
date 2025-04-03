@@ -1,16 +1,23 @@
 body {
     font-family: cursive;
-    padding: 25px;
+    padding: 12px;
     background: white
 }
 
 #page-title {
-    font-family: 'Sofia', sans-serif;
+    font-family: 'Pacifico', sans-serif;
     text-align: center;
     font-weight: bold;
-    font-size: 50px;
-    padding-bottom: 15px;
+    font-size: 48px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    /* text color gradient from https://welearncode.com/rainbow-text/#:~:text=reading%20the%20page.-,Rainbow%20Gradient,-The%20third%20method */
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #43a047, #f9a825, #ff5722);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 /* putting in flex so the images distribute across the page */
 #content {
     align-items: center;
@@ -18,6 +25,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* making the buttons */
 button {
     background: transparent;
     padding: 1px;
@@ -29,7 +37,7 @@ button {
 button img {
     display: block;
     border-radius: 10px;
-    border: 3px solid transparent; /* Prevents shifting */
+    border: 4px solid transparent; /* Prevents shifting */
     box-sizing: border-box;
 }
 /* cursor changes to click when over a clickable image */
@@ -41,12 +49,12 @@ button img {
     border: none;
     padding: 0;
     cursor: pointer;
-    margin: 12px;
+    margin: 5px;
 }
 
 .button img {
     display: block;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 /* asked chatGPT how to add a signifier that that image was selected */
     /* Active state styling */
@@ -55,12 +63,13 @@ button img {
     /* Highlight with a pink border */
 }
 
+/* different font for the text */
 #outputTitle {
     font-family: 'Nunito', sans-serif;
-    margin-bottom: 5px; /* Less space below the title */
+    margin-bottom: 5px;
 }
 
 #outputDescription {
     font-family: 'Nunito', sans-serif;
-    margin-top: 0; /* No extra space above */
+    margin-top: 0;
 }
